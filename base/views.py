@@ -9,6 +9,9 @@ from .forms import RoomForm
 #     {'id':2, 'name': 'Design with me'},
 #     {'id':3, 'name': 'Frontend developers'},
 
+def loginPage(request):
+    context = {}
+    return render(request, 'base/login_register.html', context)
 
 def home(request):
     rooms = Room.objects.all()
